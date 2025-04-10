@@ -148,7 +148,9 @@ Docker run -p host-port:container-port [image-name]
 
 Example: docker run -p 9090:9090 [image-name]
 
-Example: docker run -d -p 9090:9090 [image-name] will run the cintainer in background
+Example: docker run -d -p 9090:9090 [image-name] 
+
+will run the cintainer in background
 
 Now you can access our application using the url http://public-ip:host-post(linux-vm)
 
