@@ -61,9 +61,13 @@ For Amazon Linux use the following commands
 Install Docker In Amazon Linux VM
 ____________________________
 sudo yum update -y 
+
 sudo yum install docker -y
+
 sudo service docker start
+
 sudo usermod -aG docker ec2-user
+
 exit
 _____________________________________
 
