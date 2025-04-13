@@ -74,10 +74,16 @@ _____________________________________
 For Ubuntu use the following commands
 
 Install Docker In Ubuntu VM
+
+
 sudo apt update
+
 curl -fsSL get.docker.com | /bin/bash
+
 sudo usermod -aG docker ubuntu 
+
 exit
+
 Verify docker installation
 
 Use this command to check version of docker installed
@@ -181,8 +187,11 @@ Connect to VM using ssh cleint
 Step-2 : Install Jdk as jekins is java application and requires jdk to run jekins
 
 sudo apt update
+
 sudo apt install fontconfig openjdk-17-jre
+
 java -version
+
 
 Step-3 : Install Jenkins
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
@@ -190,7 +199,9 @@ sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
+  
 sudo apt-get update
+
 sudo apt-get install jenkins
 
 Step-4 : Start Jenkins application using the commands given below
