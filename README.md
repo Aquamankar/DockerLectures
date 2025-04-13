@@ -204,9 +204,10 @@ sudo apt-get update
 sudo apt-get install jenkins
 
 Step-4 : Start Jenkins application using the commands given below
+```
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
-
+```
 Step-5 : Verify Jenkins
 sudo systemctl status jenkins
 
@@ -214,8 +215,9 @@ Step-6 : Open jenkins server in browser using VM public ip. Jekins runs on port 
 http://public-ip-address:8080/
 
 Step-7 : Copy jenkins admin pwd
+```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
-
+```
 Step-8 : Create Admin Account & Install Required Plugins in Jenkins to start your CI/CD pipeline learning journey
 
 _____________________________________________________________________________________________________________________
@@ -223,13 +225,14 @@ ________________________________________________________________________________
 Note Docker will simply our journey to get required softwares in server through single line - 
 
 Example download Sonarqube using docker image. If not use linux command to do the same.
-
+```
 docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube:lts-community
-
+```
 
 Example download nexus using docker image, If not use linux command to do the same.
-
+```
 docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+```
 _______________________________________________________________________________________________________________________
 
 
@@ -404,8 +407,10 @@ Step 2: Note (Install maven and git in linux VM first)
  ```
     mvn clean package
 ```
-3) Create docker image and check that: 
+3) Create docker image and check that:
+```
 -> docker build -t psait/pankajsiracademy:<tag> .
+```
 (
 Here 
 -> psait is username
@@ -416,14 +421,25 @@ Here
   c. test-v1 for testing environment
   d. staging-v1 for staging environment
 )
--> docker images 
+4) 
+```
+docker images
+```
 
-5) run docker container: docker run -d -p 8080:8080 --name psa psait/your-app
+5) run docker container:
+  ```
+ docker run -d -p 8080:8080 --name psa psait/your-app
+```
 
-5)See the image is running or not: docker ps
+5)See the image is running or not:
+```
+docker ps
+```
 
-6) docker logs <container-id>
-
+6)
+```
+   docker logs <container-id>
+```
 5) Access application URL in browser: http://public-ip:8080/
 
 
@@ -431,10 +447,12 @@ Steps to push docker image to docker hub
 __________________________________________
 
 -> login into docker hub account from bash
-
+```
 docker login
 Enter username: psait
 Enter password
-
+```
 -> push docker image
+```
 docker push psait/pankajsiracademy:<tag>
+```
