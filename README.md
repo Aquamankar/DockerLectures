@@ -395,10 +395,15 @@ ENTRYPOINT ["java", "-jar", "demo-app.jar"]
 
 Step 2: Note (Install maven and git in linux VM first)
 
-1) Clone git repo in docker host machine (linux): git clone <http-url>
+1) Clone git repo in docker host machine (linux):
+   ```
+   git clone <http-url>
+   ```
 
-2) Point to project root folder: cd <app-name> and run to generate jar: mvn clean package
-
+2) Point to project root folder: cd <app-name> and run to generate jar:
+ ```
+    mvn clean package
+```
 3) Create docker image and check that: 
 -> docker build -t psait/pankajsiracademy:<tag> .
 (
@@ -413,7 +418,7 @@ Here
 )
 -> docker images 
 
-4) run docker container: docker run -d -p 8080:8080 --name psa psait/your-app
+5) run docker container: docker run -d -p 8080:8080 --name psa psait/your-app
 
 5)See the image is running or not: docker ps
 
