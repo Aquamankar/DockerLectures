@@ -1,5 +1,4 @@
 # DockerLectures
-docker
 
 Docker
 _____________
